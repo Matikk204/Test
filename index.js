@@ -16,7 +16,7 @@ let wow = (e) => {
     
     }
     if (e.key === "Tab") {
-        alert("ok")
+        alert("o hihik")
     
     }
 }
