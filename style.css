@@ -1,0 +1,58 @@
+:root {
+    --main-img: url(assets/fjell.jpg);
+}
+img {
+    filter: blur(12px);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.bilde1 {
+    position: relative;
+    background: var(--main-img);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    transform: rotate(15deg) skew(10deg) scale(250%);
+    animation: mymove 5s infinite;
+}
+
+.shadow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .2);
+    top: 50;
+    left: 50;
+    backdrop-filter: blur(2px);
+    border-top-left-radius: 40px;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    0%   {
+        top: 0px;
+        backdrop-filter: blur(2px);
+        transform: rotate(15deg) skew(5deg) scale(150%);
+    }
+    25%  {
+        top: 200px;
+        backdrop-filter: blur(5px);
+        transform: rotate(35deg) skew(10deg) scale(250%);
+    }
+    50%  {
+        top: 100px;
+        backdrop-filter: blur(0px);
+        transform: rotate(75deg) skew(7deg) scale(250%);
+    }
+    75%  {
+        top: 200px;
+        backdrop-filter: blur(-2px);
+        transform: rotate(45deg) skew(10deg) scale(250%);
+    }
+    100% {
+        top: 0px;
+        backdrop-filter: blur(0px);
+        transform: rotate(15deg) skew(5deg) scale(150%);
+    }
+}
