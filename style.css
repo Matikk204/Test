@@ -9,6 +9,7 @@ img {
 }
 .bilde1 {
     position: relative;
+    margin: 120px auto;
     background: var(--main-img);
     background-size: cover;
     width: 200px;
@@ -26,14 +27,46 @@ img {
     left: 50;
     backdrop-filter: blur(2px);
     border-top-left-radius: 40px;
-    animation: mymove 5s infinite;
+    animation: mymove2 5s infinite;
+}
+
+body{
+    overflow: hidden;
 }
 
 @keyframes mymove {
     0%   {
-        top: 0px;
         backdrop-filter: blur(2px);
         transform: rotate(15deg) skew(5deg) scale(150%);
+        border-top-left-radius: 400px;
+    }
+    25%  {
+        backdrop-filter: blur(5px);
+        transform: rotate(35deg) skew(10deg) scale(250%);
+    }
+    50%  {
+        backdrop-filter: blur(0px);
+        transform: rotate(75deg) skew(7deg) scale(250%);
+        border-top-left-radius: 10px;
+    }
+    75%  {
+        backdrop-filter: blur(20px);
+        transform: rotate(45deg) skew(10deg) scale(250%);
+    }
+    100% {
+        backdrop-filter: blur(0px);
+        transform: rotate(15deg) skew(5deg) scale(150%);
+        border-top-left-radius: 400px;
+    }
+}
+
+@keyframes mymove2 {
+    0%   {
+        top: 0px;
+        left: 50px;
+        backdrop-filter: blur(2px);
+        transform: rotate(15deg) skew(5deg) scale(150%);
+        border-top-left-radius: 400px;
     }
     25%  {
         top: 200px;
@@ -41,18 +74,22 @@ img {
         transform: rotate(35deg) skew(10deg) scale(250%);
     }
     50%  {
+        left: 100px;
         top: 100px;
         backdrop-filter: blur(0px);
         transform: rotate(75deg) skew(7deg) scale(250%);
+        border-top-left-radius: 10px;
     }
     75%  {
         top: 200px;
-        backdrop-filter: blur(-2px);
+        backdrop-filter: blur(20px);
         transform: rotate(45deg) skew(10deg) scale(250%);
     }
     100% {
+        left: 50px;
         top: 0px;
         backdrop-filter: blur(0px);
         transform: rotate(15deg) skew(5deg) scale(150%);
+        border-top-left-radius: 400px;
     }
 }
