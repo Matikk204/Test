@@ -2,7 +2,7 @@
     --main-img: url(assets/fjell.jpg);
 }
 img {
-    filter: blur(-10px);
+    filter: blur(0px);
     width: 150px;
     height: 150px;
     border-radius: 50%;
